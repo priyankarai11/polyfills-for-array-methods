@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str="hello hi how are you"
+        Object.prototype.splitFunc=function(str, ch)
+        {
+            let pos, start = 0, result = [];
+            while ((pos = str.indexOf(ch, start)) != -1) 
+            {
+                result.push(str.substring(start, pos));
+                start = pos +(ch.length);
+            }
+            result.push(str.substr(start));
+            console.log(result)
+        }
+              
+    str.splitFunc(str," ")
+    </script>
+</body>
+</html>
